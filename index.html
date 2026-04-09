@@ -1,23 +1,512 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "수입차 법인 리스 최신 정보",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@type": "Article",
+                    "url": "/",
+                    "name": "수입차 법인 리스 절약 가이드: 2026년 세제 개편안 반영 최적화 전략",
+                    "datePublished": "2026-01-05T10:00:00+09:00",
+                    "author": {
+                        "@type": "Person",
+                        "name": "리스 전문가",
+                        "url": "/"
+                    },
+                    "headline": "수입차 법인 리스 절약 가이드: 2026년 세제 개편안 반영 최적화 전략"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@type": "Article",
+                    "url": "/",
+                    "name": "수입차 법인 리스 vs 장기렌트 심층 비교: 비용 효율성 분석",
+                    "datePublished": "2026-01-04T10:00:00+09:00",
+                    "author": {
+                        "@type": "Person",
+                        "name": "리스 전문가",
+                        "url": "/"
+                    },
+                    "headline": "수입차 법인 리스 vs 장기렌트 심층 비교: 비용 효율성 분석"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@type": "Article",
+                    "url": "/",
+                    "name": "인기 수입차 모델별 법인 리스 가격 비교: 벤츠 E클래스, BMW 5시리즈, 아우디 A6",
+                    "datePublished": "2026-01-03T10:00:00+09:00",
+                    "author": {
+                        "@type": "Person",
+                        "name": "리스 전문가",
+                        "url": "/"
+                    },
+                    "headline": "인기 수입차 모델별 법인 리스 가격 비교: 벤츠 E클래스, BMW 5시리즈, 아우디 A6"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@type": "Article",
+                    "url": "/",
+                    "name": "법인 리스 회계 처리 및 세무 절감 노하우: 내돈내산 후기 기반 분석",
+                    "datePublished": "2026-01-02T10:00:00+09:00",
+                    "author": {
+                        "@type": "Person",
+                        "name": "리스 전문가",
+                        "url": "/"
+                    },
+                    "headline": "법인 리스 회계 처리 및 세무 절감 노하우: 내돈내산 후기 기반 분석"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                    "@type": "Article",
+                    "url": "/",
+                    "name": "수입차 법인 리스 시 주의사항: 금리, 잔존가치, 주행거리 제한 심층 분석",
+                    "datePublished": "2026-01-01T10:00:00+09:00",
+                    "author": {
+                        "@type": "Person",
+                        "name": "리스 전문가",
+                        "url": "/"
+                    },
+                    "headline": "수입차 법인 리스 시 주의사항: 금리, 잔존가치, 주행거리 제한 심층 분석"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* 기본 스타일 및 부드러운 색감 적용 */
+        body { font-family: 'Noto Sans KR', sans-serif; line-height: 1.7; margin: 0; padding: 0; background: #f0f4f8; color: #333; }
+        header, section, footer { max-width: 1000px; margin: 25px auto; padding: 25px 20px; background: #ffffff; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+        
+        /* 🎨 다채롭고 부드러운 색감: 금융/신뢰 테마 */
+        h1 { color: #007bff; /* 메인 타이틀 강조 */ font-size: 2.5em; text-align: center; margin-bottom: 5px; }
+        h2 { color: #28a745; /* 섹션 타이틀: 절약/혜택 강조 */ border-bottom: 3px solid #e9ecef; padding-bottom: 10px; margin-top: 30px; }
+        h3 { color: #17a2b8; /* 서브 타이틀: 정보성/팁 강조 */ margin-top: 20px; }
+        
+        ul, ol { padding-left: 25px; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: separate; border-spacing: 0 10px; margin: 20px 0; }
+        th, td { padding: 15px; text-align: left; border: none; }
+        th { background: #007bff; color: #fff; border-radius: 8px 8px 0 0; }
+        td { background: #f8f9fa; border-bottom: 1px solid #dee2e6; }
+        tr:last-child td { border-bottom: none; }
+        
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        /* 🚀 CTA 버튼 강조 */
+        .btn-cta {
+            display: block; /* 전체 너비 사용 */
+            width: 80%;
+            margin: 25px auto;
+            padding: 18px 30px;
+            background: #ff5722; /* 액션 색상: 오렌지 */
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: 700;
+            border-radius: 40px;
+            box-shadow: 0 6px 12px rgba(255, 87, 34, 0.4);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            text-transform: uppercase;
+        }
+        .btn-cta:hover {
+            background: #e64a19;
+            transform: translateY(-2px);
+        }
+
+        /* 폼 스타일 */
+        form label { font-weight: 600; display: block; margin-top: 15px; color: #333; }
+        form input[type="text"], form input[type="tel"], form input[type="number"], form select, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        form input:focus, form select:focus, form textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        /* 정보성 텍스트 박스 스타일 */
+        .info-box {
+            background: #e6f7ff; /* 라이트 블루 */
+            border-left: 5px solid #007bff;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        /* 앵커 숨김 처리 */
+        .anchor { display: block; position: relative; top: -80px; visibility: hidden; }
+
+        /* 반응형 */
+        @media(max-width: 768px) {
+            header, section, footer { margin: 15px auto; padding: 15px; }
+            h1 { font-size: 2em; }
+            .btn-cta { width: 90%; padding: 15px 0; font-size: 1.1em; }
+            th, td { display: block; width: 100%; text-align: left; }
+            th { border-radius: 8px; margin-top: 10px; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>수입차 법인 리스 최저가 비교 견적</h1>
+        <p>복잡한 수입차 법인 리스, 이제 1분 견적 비교로 **최대 40%** 비용 절감 효과를 경험하세요. 벤츠 E클래스부터 포르쉐까지, 모든 인기 모델을 투명하게 비교합니다.</p>
+        <a href="#quick-estimate" class="btn-cta">🚀 내 법인에 맞는 최저가 **리스 견적** 즉시 확인하기</a>
+    </header>
+
+    <nav aria-label="주요 서비스 메뉴">
+        <ul>
+            <li><a href="#quick-estimate">실시간 견적 (필수)</a></li>
+            <li><a href="#seo-keywords">법인 리스 핵심 키워드</a></li>
+            <li><a href="#saving-tips">세금 절약 팁</a></li>
+            <li><a href="#coverage-guide">리스 vs 렌트 vs 할부 비교</a></li>
+            <li><a href="#trust-links">신뢰 정보 출처</a></li>
+            <li><a href="#long-info">심층 정보 및 FAQ</a></li>
+            <li><a href="#contact-more">추가 상담 신청</a></li>
+        </ul>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+    <section id="quick-estimate">
+        <span id="quick-estimate-anchor" class="anchor"></span>
+        <h2>🔎 **나만의 최저가 수입차 법인 리스 견적** 실시간 비교</h2>
+        <p>법인 사업자를 위한 맞춤형 수입차 리스 견적을 국내 주요 금융사(A캐피탈, B은행, C리스사 등)의 실시간 금리와 특별 할인 프로모션을 반영하여 제공합니다. 원하시는 모델을 선택하고, 최적의 조건(초기 비용 0, 잔존 가치 조정 등)으로 설계된 견적을 받아보세요.</p>
+        <form action="/compare-submit" method="POST" style="max-width:800px; margin:auto;">
+            <h3>🔑 **필수 차량 및 리스 조건 입력**</h3>
+            <div style="display:flex; flex-wrap:wrap; justify-content:space-between;">
+                <div style="width:48%;">
+                    <label for="car-brand">희망 브랜드 선택<span style="color:red;">*</span></label>
+                    <select id="car-brand" name="car_brand" required>
+                        <option value="">선택</option>
+                        <option value="Mercedes-Benz">Mercedes-Benz</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Audi">Audi</option>
+                        <option value="Volvo">Volvo</option>
+                        <option value="Lexus">Lexus</option>
+                        <option value="Tesla">Tesla</option>
+                        <option value="Porsche">Porsche</option>
+                        <option value="Land Rover">Land Rover</option>
+                        <option value="Others">기타</option>
+                    </select>
+                </div>
+                <div style="width:48%;">
+                    <label for="car-model">희망 모델명<span style="color:red;">*</span></label>
+                    <input type="text" id="car-model" name="car_model" required placeholder="예: 벤츠 E클래스, BMW 5시리즈, 아우디 A6">
+                </div>
+            </div>
+
+            <div style="display:flex; flex-wrap:wrap; justify-content:space-between;">
+                <div style="width:48%;">
+                    <label for="lease-term">희망 리스 기간 (개월)<span style="color:red;">*</span></label>
+                    <select id="lease-term" name="lease_term" required>
+                        <option value="">선택</option>
+                        <option value="36">36개월</option>
+                        <option value="48">48개월</option>
+                        <option value="60">60개월</option>
+                        <option value="72">72개월</option>
+                    </select>
+                </div>
+                <div style="width:48%;">
+                    <label for="initial-fee">초기 납입금 비율 (보증금/선납금)<span style="color:red;">*</span></label>
+                    <select id="initial-fee" name="initial_fee" required>
+                        <option value="">선택</option>
+                        <option value="0%">0% (초기 비용 0)</option>
+                        <option value="10%">10%</option>
+                        <option value="20%">20%</option>
+                        <option value="30%">30% 이상</option>
+                    </select>
+                </div>
+            </div>
+
+            <label for="annual-mileage">연간 주행거리 설정 (km)<span style="color:red;">*</span></label>
+            <select id="annual-mileage" name="annual_mileage" required>
+                <option value="">선택</option>
+                <option value="10000">10,000 km</option>
+                <option value="20000">20,000 km</option>
+                <option value="30000">30,000 km</option>
+                <option value="무제한">무제한 (주행거리 제한 없음)</option>
+            </select>
+            
+            <label for="company-type">사업장 구분</label>
+            <select id="company-type" name="company_type">
+                <option value="법인">법인 사업자</option>
+                <option value="개인사업자">개인 사업자</option>
+            </select>
+
+            <label for="phone">연락처<span style="color:red;">*</span></label>
+            <input type="tel" id="phone" name="phone" required placeholder="010-1234-5678" pattern="[0-9\-]+">
+
+            <button type="submit" class="btn-cta">최저가 **수입차 법인 리스** 견적 무료 비교 신청</button>
+        </form>
+    </section>
+    
+    <hr>
+    
+    <section id="seo-keywords">
+        <span id="seo-keywords-anchor" class="anchor"></span>
+        <h2>🔍 **수입차 법인 리스** 핵심 키워드 및 검색 의도 분석</h2>
+        <p class="info-box">
+            네이버 웹사이트 상위 노출을 위해 '수입차법인리스' 검색 시 사용자들이 실제로 궁금해하는 **자동완성, 연관 검색어**를 분석하여 심층적인 정보를 제공합니다. 법인 리스에 대한 정확한 이해를 돕기 위해 핵심 정보를 총망라합니다.
+        </p>
+        
+        <h3>연관 키워드 & 함께 많이 찾는 카테고리 (정보성 텍스트 대폭 추가 시작)</h3>
+        <p>
+            '수입차법인리스'를 검색하는 사용자들은 단순한 차량 가격 비교를 넘어, **세금 혜택**과 **회계 처리**의 복잡한 문제들을 해결하고자 합니다. 특히, 수입차를 법인 명의로 구매할 때 발생하는 초기 비용(등록세, 취득세 등)과 감가상각 비용 처리의 차이점을 명확히 알고 싶어합니다. 많은 분들이 '수입차법인리스 장단점', '법인리스 비용 처리', '벤츠법인리스 가격', '저렴한 법인리스 업체' 등의 키워드를 함께 검색합니다.
+        </p>
+
+        <ol>
+            <li>**법인리스 장점/단점:** (핵심 키워드) 리스가 구매보다 유리한지 판단하기 위한 비교 분석 정보입니다.</li>
+            <li>**법인리스 비용 처리:** (자동완성) 리스료가 전액 손비(비용) 처리되는지 여부와 연간 한도(1500만원 등)에 대한 궁금증입니다.</li>
+            <li>**수입차리스 견적 비교:** (연관 키워드) BMW 5시리즈, Audi A6, Mercedes-Benz E-Class 등 특정 모델의 **예상 가격**을 확인하고자 합니다.</li>
+            <li>**법인리스 장기렌트 차이점:** (함께 찾는 카테고리) 리스와 장기렌트의 회계 처리, 번호판, 보험료 차이점을 알고 싶어합니다.</li>
+            <li>**법인리스 할인 프로모션:** (추천 키워드) **저렴한곳**을 찾기 위해 매월 진행되는 캐피탈사의 **할인 혜택**을 검색합니다.</li>
+        </ol>
+        
+        <p>
+            법인 명의로 차량을 취득하는 방법은 크게 현금 일시불 구매, 할부 구매, 리스, 장기렌트 네 가지로 나뉩니다. 이 중 **수입차법인리스**는 초기 비용 부담을 최소화하면서도, 차량 운행과 관련된 제반 비용(보험료, 자동차세 등)을 월 리스료에 포함시켜 회계 처리를 단순화할 수 있는 장점을 가집니다. 특히 고가 수입차의 경우, 리스 계약 시 **잔존가치**를 높게 설정하여 월 납입금을 낮추는 것이 일반적입니다. 이는 **벤츠 S클래스**나 **포르쉐 카이엔** 같은 고가 모델을 법인 명의로 운용할 때 매우 효과적인 방법입니다. 다만, 계약 시 설정한 주행거리 초과 시 발생하는 추가 비용과 계약 기간 중 해지 시 발생하는 위약금 등 **단점**도 고려해야 합니다.
+        </p>
+    </section>
+
+    <hr>
+
+    <section id="saving-tips">
+        <span id="saving-tips-anchor" class="anchor"></span>
+        <h2>✅ **수입차 법인 리스** 비용 절약! 세금 혜택 및 절감 노하우 (정보성 텍스트)</h2>
+        <p>
+            법인 사업자에게 **수입차법인리스**가 매력적인 가장 큰 이유는 세금 혜택입니다. 리스료 전액을 손비 처리하여 법인세(또는 종합소득세)를 줄일 수 있기 때문입니다. 하지만 2026년 이후 세법 개정으로 인해 무분별한 비용 처리가 제한되고 있어, 정확한 세무 지식이 필요합니다. 다음은 **법인리스 비용 절감**을 위한 핵심 팁입니다.
+        </p>
+        
+        <h3>1. 차량 운행 기록부 작성과 세금 한도 📈</h3>
+        <p>
+            법인 명의 차량의 비용 처리 한도는 연간 1500만원(리스료 + 유지비)입니다. 이를 초과하여 비용을 인정받으려면 **차량 운행 기록부**를 작성하여 업무용 사용 비율을 증명해야 합니다. 운행 기록부는 단순히 '출퇴근'만 기록하는 것이 아니라, 업무 목적, 주행 거리, 시동 켜고 끈 시간 등을 상세하게 기록해야 합니다. **벤츠 E클래스**나 **BMW 5시리즈**와 같이 업무용과 개인용으로 혼용되는 모델의 경우, 이 기록부 작성이 세금 절감의 핵심입니다. 만약 기록부 없이 1500만원 한도를 초과하여 비용 처리할 경우, 초과 금액은 손금불산입되어 법인세가 증가할 수 있습니다.
+        </p>
+
+        <h3>2. 리스 계약 시 '보증금' vs '선납금' 선택의 중요성</h3>
+        <p>
+            **보증금(Deposit)**은 계약 종료 후 돌려받는 금액이며, **선납금(Advance Payment)**은 리스 기간 동안의 리스료를 미리 납부하는 금액입니다.
+            <ul>
+                <li><strong>보증금:</strong> 초기 비용 부담이 있지만, 신용도에 따라 금리를 낮추거나 리스 심사를 통과하는 데 유리합니다. 계약 종료 후 전액 환불받으므로 자금 회수 측면에서 유리합니다.</li>
+                <li><strong>선납금:</strong> 리스료를 선납하여 월 납입금을 낮추는 효과가 있습니다. 다만, 계약 해지 시 환불받지 못하며, 회계상 비용 처리 시에도 주의가 필요합니다. 세금 절약을 위한 목적으로 선납금을 과도하게 설정하는 것은 불리할 수 있습니다.</li>
+            </ul>
+            **수입차법인리스**를 선택할 때 초기 비용 부담을 줄이려면 **선납금**을 활용하고, 자금 운용의 유연성을 원한다면 **보증금**을 선택하는 것이 일반적입니다.
+        </p>
+        
+        <h3>3. 잔존가치(Residual Value)의 이해와 활용</h3>
+        <p>
+            **잔존가치**란 리스 계약 종료 시점에 차량의 예상되는 중고 가격을 의미합니다. 리스 계약 시 **잔존가치**를 높게 설정할수록 월 리스료가 낮아집니다. **벤츠 GLE**나 **Porsche Cayenne**과 같이 중고 가치가 높은 모델일수록 잔존가치를 높게 설정할 수 있어, 월 납입금이 **저렴한** 리스 견적을 받을 가능성이 높습니다. 그러나 잔존가치가 높으면 계약 종료 후 차량 인수 시 부담해야 할 금액(인수금)이 커지므로, 인수를 고려하는지 반납을 고려하는지에 따라 전략을 다르게 짜야 합니다.
+        </p>
+        
+        <p class="info-box">
+            💡 **핵심 정리:** 단순히 리스료가 **얼마**인지 비교하는 것보다, 리스료에 포함된 금리, 차량 운행 기록부 작성 여부, 초기 비용 설정에 따른 세금 혜택을 종합적으로 고려해야 합니다. **저렴한곳**을 찾는 것보다, 세금 절감 효과를 극대화하는 **전문 업체**의 컨설팅을 받는 것이 중요합니다.
+        </p>
+    </section>
+    
+    <hr>
+    
+    <section id="coverage-guide">
+        <span id="coverage-guide-anchor" class="anchor"></span>
+        <h2>🛡️ **리스 vs 장기렌트 vs 할부** 심층 비교 가이드 (정보성 텍스트)</h2>
+        <p>
+            **수입차 법인 리스**를 고려하는 많은 분들이 장기렌트나 할부 구매와 어떤 **차이점**이 있는지 궁금해합니다. 각 방식은 세금 처리, 보험료, 차량 번호판, 회계 처리 방식에서 큰 차이를 보이며, 법인의 재무 상황과 운행 목적에 따라 최적의 선택이 달라집니다.
+        </p>
+
+        <h3>주요 차량 금융 상품 비교 분석</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>법인 운용리스 (Operating Lease)</th>
+                    <th>법인 장기렌트 (Long-term Rental)</th>
+                    <th>법인 할부 구매 (Loan Purchase)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>**차량 소유권**</td>
+                    <td>리스사 (법인 명의로 회계 처리)</td>
+                    <td>렌터카 회사</td>
+                    <td>법인</td>
+                </tr>
+                <tr>
+                    <td>**차량 번호판**</td>
+                    <td>일반 번호판 (하, 호, 허 제외)</td>
+                    <td>렌터카 번호판 (하, 호, 허)</td>
+                    <td>일반 번호판</td>
+                </tr>
+                <tr>
+                    <td>**회계 처리**</td>
+                    <td>금융리스(자산) 또는 운용리스(부채)로 처리. 월 리스료 전액 비용 처리.</td>
+                    <td>월 렌트료 전액 비용 처리 (손비). 리스보다 간단함.</td>
+                    <td>차량가액을 자산으로 등재. 감가상각을 통해 비용 처리.</td>
+                </tr>
+                <tr>
+                    <td>**보험료**</td>
+                    <td>운전자 경력 인정 가능. 법인 명의로 보험 가입.</td>
+                    <td>렌터카 회사 명의로 보험 가입 (보험료에 포함). 운전 경력 단절.</td>
+                    <td>운전자 경력 인정 가능. 법인 명의로 보험 가입.</td>
+                </tr>
+                <tr>
+                    <td>**세금 혜택**</td>
+                    <td>취득세, 등록세 등 절감. 리스료 비용 처리.</td>
+                    <td>취득세, 등록세 등 절감. 렌트료 비용 처리.</td>
+                    <td>취득세, 등록세 발생. 감가상각 비용 처리.</td>
+                </tr>
+                <tr>
+                    <td>**초기 비용**</td>
+                    <td>보증금/선납금 (보증금 0% 가능)</td>
+                    <td>보증금 (보증금 0% 가능)</td>
+                    <td>취득세, 등록세 등 초기 비용 발생</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>장기렌트의 장점과 리스의 단점</h3>
+        <p>
+            **수입차법인리스**는 일반 번호판을 사용할 수 있어 차량의 품위를 유지할 수 있다는 장점이 있습니다. **벤츠 E클래스**나 **BMW 5시리즈**를 운용하는 법인 대표님들이 리스를 선호하는 이유입니다. 반면, 장기렌트는 초기 비용이 적고, 보험료가 렌트료에 포함되어 있어 보험 이력이 쌓이지 않습니다. 또한, 보험료 할증 걱정이 없어 운전 미숙자나 사고 이력이 많은 법인에게 유리할 수 있습니다. 하지만 번호판(하, 허, 호)이 노출되어 품위를 중시하는 법인에서는 **단점**으로 작용합니다.
+        </p>
+        <p>
+            리스와 장기렌트의 선택은 법인의 재무 상황과 대표이사의 선호도에 따라 달라집니다. **저렴한** 가격을 우선시하고 회계 처리를 단순화하고 싶다면 장기렌트를, 일반 번호판 사용과 보험 경력을 유지하고 싶다면 리스를 선택하는 것이 일반적입니다. **전문 업체** 상담을 통해 법인의 상황에 맞는 최적의 방법을 선택하는 것이 중요합니다.
+        </p>
+    </section>
+
+    <hr>
+    
+    <section id="trust-links">
+        <span id="trust-links-anchor" class="anchor"></span>
+        <h2>🌐 **신뢰할 수 있는 수입차 법인 리스 정보 출처**</h2>
+        <p>
+            **수입차법인리스** 관련 정보는 세법과 금융 정책에 따라 끊임없이 변동합니다. 아래 공신력 있는 기관 및 사이트를 통해 정확하고 신뢰할 수 있는 정보를 직접 확인해보세요. 이는 **네이버 웹사이트 상위 노출**을 위한 신뢰도 확보(E-A-T)에도 큰 도움을 줍니다.
+        </p>
+        
+        <ol>
+            <li><a href="https://www.nts.go.kr/" target="_blank">**[국세청]** 국세법령정보시스템</a>: 차량 운행 기록부 작성 방법 및 손금 산입 기준 등 법인세 관련 공식 정보 제공.</li>
+            <li><a href="https://www.fss.or.kr/" target="_blank">**[금융감독원]** 금융소비자 정보포털 파인</a>: 리스 계약 관련 약관, 소비자 경보, 금융 분쟁 조정 사례 등 확인 가능.</li>
+            <li><a href="https://www.kofia.or.kr/" target="_blank">**[여신금융협회]** 여신금융상품 이용자 보호 가이드라인</a>: 리스 상품 이용 시 소비자가 알아야 할 기본 권리 및 주의사항 안내.</li>
+            <li><a href="https://www.kidi.or.kr/" target="_blank">**[보험개발원]** 자동차 보험료 비교 공시</a>: 리스 차량의 보험료 산정 기준 및 비교 정보 제공.</li>
+            <li><a href="https://www.law.go.kr/" target="_blank">**[국가법령정보센터]** 여신전문금융업법</a>: 리스 계약의 법적 근거 및 관련 규정 확인.</li>
+            <li><a href="https://namu.wiki/w/자동차%20리스" target="_blank">**[나무위키]** 자동차 리스 항목</a>: 리스 관련 정보를 일반적인 용어로 쉽게 정리하여 제공.</li>
+        </ol>
+        
+        <p>
+            이러한 공식 채널을 통해 **수입차법인리스**의 세금 및 회계 처리 기준을 교차 확인하는 것이 현명한 소비자 행동입니다. 특히 리스사나 **전문 업체**의 제안이 세법 규정을 제대로 따르고 있는지 확인하는 것이 중요합니다.
+        </p>
+    </section>
+
+    <hr>
+    
+    <section id="long-info">
+        <span id="long-info-anchor" class="anchor"></span>
+        <h2>📚 **수입차 법인 리스** 심층 정보 및 자주 묻는 질문 (FAQ)</h2>
+        <p>
+            **수입차법인리스**를 둘러싼 오해와 궁금증을 해소하고, 복잡한 리스 용어를 명확하게 설명하여 검색자의 체류 시간을 극대화합니다. (이 부분에 긴 정보성 텍스트를 배치합니다.)
+        </p>
+
+        <h3>1. 법인 리스 심사 기준과 필요 서류는?</h3>
+        <p>
+            **수입차법인리스**는 차량 구매 대금을 금융사(캐피탈사)가 대신 지불하고 법인에 빌려주는 형태이므로, 심사 기준이 매우 중요합니다. 주요 심사 기준은 **법인 신용도**, **대표이사 신용 점수**, **법인 설립 연차**, **재무 건전성(매출액, 순이익)** 등입니다. 신설 법인이나 매출이 적은 법인은 심사가 까다로울 수 있으며, 보증금을 높게 요구받거나 **금액**이 높아질 수 있습니다. 필요 서류는 사업자등록증, 재무제표, 법인 등기부 등본, 대표자 신분증 등입니다.
+            *   <strong>신규 법인 심사:</strong> 신설 법인(설립 3개월 미만)의 경우, 재무 자료가 없어 심사가 거절되는 경우가 많습니다. 이때는 대표이사 연대 보증이나 보증금 납부를 통해 심사를 받을 수 있습니다.
+            *   <strong>개인 사업자 심사:</strong> 개인 사업자는 대표자의 신용도와 소득 증빙 자료(부가세 신고서, 소득금액 증명원 등)가 중요하며, 법인에 비해 심사 기준이 유연할 수 있습니다.
+        </p>
+
+        <h3>2. 리스 계약 종료 시 선택지는 무엇인가요?</h3>
+        <p>
+            리스 계약이 만료되면 일반적으로 세 가지 선택지가 있습니다. 이 선택은 초기 계약 시 설정한 잔존가치와 밀접한 관련이 있습니다.
+            <ol>
+                <li><strong>차량 반납:</strong> 차량을 리스사에 반납합니다. 주행거리 초과나 차량 손상이 심할 경우 추가 비용이 발생할 수 있습니다. 리스 기간 동안 **저렴한** 월 납입금을 목표로 하고, 차량 인수를 원하지 않는 경우에 적합합니다.</li>
+                <li><strong>차량 인수:</strong> 리스 계약 시 정한 **잔존가치**를 지불하고 차량을 법인 명의로 인수합니다. 차량을 계속 소유하고 싶거나, 잔존가치가 높게 책정되어 중고 시세가 인수 금액보다 높은 경우에 유리합니다.</li>
+                <li><strong>재리스(연장):</strong> 리스 기간을 연장합니다. 차량 교체가 번거롭거나, 현재의 **예상** 월 리스료가 부담되지 않을 때 선택합니다. 이 경우 잔존가치를 재설정하여 월 납입금을 조정할 수 있습니다.</li>
+            </ol>
+            최적의 **내돈내산** 선택을 위해서는 계약 만료 시점의 차량 상태와 중고 시장 **가격**을 종합적으로 고려해야 합니다.
+        </p>
+
+        <h3>3. 수입차 법인 리스와 보험료의 관계</h3>
+        <p>
+            **수입차법인리스**는 리스사 명의로 차량을 등록하고 법인 명의로 보험에 가입합니다. 따라서 운전자의 보험 경력이 단절되지 않습니다. 이는 **장기렌트**의 가장 큰 **단점** 중 하나인 보험 경력 단절과 비교되는 **장점**입니다. 법인 명의 보험은 운전자 범위를 지정하여 가입하며, 운전 경력이 오래된 대표이사나 임직원이 운전하는 경우, 보험료가 저렴하게 책정될 수 있습니다. 리스 계약을 진행할 때 보험료가 리스료에 포함되는 경우와 별도로 가입하는 경우가 있으므로, 계약서를 꼼꼼히 확인하여 최종 **비용**을 비교해야 합니다.
+        </p>
+
+        <h3>4. **수입차법인리스**를 선택할 때 고려해야 할 인기 모델</h3>
+        <p>
+            **수입차법인리스**를 이용하는 법인들이 선호하는 모델은 차량의 품위 유지와 감가상각 방어력이 높은 모델들입니다.
+            <ul>
+                <li><strong>준대형 세단:</strong> **벤츠 E클래스 (E250, E300)**, **BMW 5시리즈 (520i, 530e)**, **Audi A6 (45 TFSI)**는 가장 대중적인 선택지입니다. 이 모델들은 중고 시세 방어가 뛰어나 잔존가치가 높게 책정되어 월 리스료가 **저렴한곳**이 많습니다.</li>
+                <li><strong>고급 SUV:</strong> **Volvo XC90**, **Lexus RX450h**, **BMW X5**, **Audi Q7** 등은 업무용으로도, 가족용으로도 활용성이 높아 꾸준한 인기를 끌고 있습니다.</li>
+                <li><strong>고성능/럭셔리:</strong> **Porsche Cayenne**, **Mercedes-Benz GLE**, **Range Rover Velar** 등은 고가 모델임에도 불구하고 리스를 통해 세금 절감 효과를 극대화하려는 법인 대표들에게 선호됩니다.</li>
+                <li><strong>전기차:</strong> 최근에는 **Tesla Model 3/Y**, **Audi e-tron**, **Mercedes-Benz EQE/EQS** 등 전기차 리스도 증가하고 있습니다. 전기차는 취득세 감면 혜택이 있어 **수입차법인리스** 초기 비용을 줄이는 데 도움이 됩니다.</li>
+            </ul>
+        </p>
+        
+        <h3>5. 리스 해지 시 위약금과 주의사항</h3>
+        <p>
+            리스 계약 기간 중 해지할 경우, 예상치 못한 **위약금**이 발생할 수 있습니다. 위약금은 남은 리스료와 차량 잔존가치, 금융사의 해지 수수료를 합산하여 계산되므로 그 **금액**이 클 수 있습니다. 따라서 리스 계약 시 해지 조항을 반드시 확인해야 합니다. <strong>리스</strong>는 장기적인 계획을 세우고 진행하는 것이 중요하며, 만약 계약 기간을 채우지 못할 가능성이 있다면 리스보다는 **장기렌트**나 다른 금융 상품을 고려하는 것이 좋습니다.
+            *   **중도 해지:</strong> 리스 계약을 해지하면 신용 점수에 영향을 줄 수 있습니다.
+            *   **승계:** 리스 계약을 다른 사람에게 승계하는 방법도 있습니다. 이 경우, 승계 수수료가 발생하지만 위약금보다는 부담이 적을 수 있습니다. **저렴한** 리스료를 원하는 수요가 많아 승계 매물은 인기가 많습니다.
+        </p>
+        <h3>6. 법인 리스 관련 기타 키워드와 정보</h3>
+        <p>
+            최근에는 **수입차법인리스** 관련 정보가 **네이버**나 **구글** 검색뿐만 아니라 **유튜브** 채널에서도 활발하게 공유되고 있습니다. **Gemini**나 **ChatGPT**와 같은 **AI** 기반의 금융 조언 서비스도 등장하고 있으며, **인스타그램**과 **페이스북**에서는 딜러사별 **이벤트**와 **프로모션** 정보가 실시간으로 올라옵니다. **디시**인사이드와 같은 온라인 커뮤니티에서는 **내돈내산 후기**나 비공식적인 **할인 팁**이 공유되기도 합니다. 이러한 다양한 채널의 정보를 종합적으로 활용하면, **수입차법인리스**를 **저렴하게** 이용할 수 있는 기회를 찾을 수 있습니다.
+        </p>
+    </section>
+
+    <hr>
+
+    <section id="contact-more">
+        <span id="contact-more-anchor" class="anchor"></span>
+        <h2>📞 **수입차 법인 리스** 상세 맞춤 상담 신청</h2>
+        <p>
+            법인의 재무 상황과 운행 목적에 맞는 최적의 **수입차법인리스** 조건을 설계해드립니다. 복잡한 세금 문제, 최저 금리 조건, 특별 프로모션 적용 등 개별적인 추가 할인 요소에 대해 전문 상담사와 심층 상담을 원하시면 아래 양식을 작성해주세요. 가장 **저렴한** 비용으로 **수입차법인리스**를 이용할 수 있도록 돕겠습니다.
+        </p>
+        <form action="/deep-consulting" method="POST" style="max-width:600px; margin:auto; padding: 20px; border: 1px dashed #ccc; border-radius: 8px;">
+            <h3>세부 상담 요청서 (체류시간 증대)</h3>
+            <label for="name">이름<span style="color:red;">*</span></label>
+            <input type="text" id="name2" name="name" required />
+
+            <label for="company-name">법인명/사업자명<span style="color:red;">*</span></label>
+            <input type="text" id="company-name" name="company_name" required />
+
+            <label for="phone">연락처<span style="color:red;">*</span></label>
+            <input type="tel" id="phone2" name="phone" required placeholder="010-1234-5678" pattern="[0-9\-]+" />
+
+            <label for="car-model-interest">희망 차량 모델 (예: BMW 5시리즈, 벤츠 E클래스)</label>
+            <input type="text" id="car-model-interest" name="car_model_interest" placeholder="예: 벤츠 E클래스 250 아방가르드" />
+
+            <label for="move-type">상담 희망 내용<span style="color:red;">*</span></label>
+            <select id="consult-type" name="consult_type" required>
+                <option value="">선택하세요</option>
+                <option value="세금절감">세금 절감 극대화 전략 문의</option>
+                <option value="최저가견적">최저가 견적 및 프로모션 문의</option>
+                <option value="장단점비교">리스 vs 렌트 장단점 비교 문의</option>
+                <option value="신설법인">신설 법인 리스 심사 관련 문의</option>
+                <option value="기타">기타 상세 문의</option>
+            </select>
+
+            <label for="message">상세 요청 사항 및 특이사항</label>
+            <textarea id="message" name="message" rows="4" placeholder="예: 법인 설립 1년차이며, 벤츠 E클래스 리스를 고려 중입니다. 보증금 0%로 진행하고 싶습니다."></textarea>
+
+            <button type="submit" class="btn-cta">추가 상담 요청 보내기</button>
+        </form>
+    </section>
+  
